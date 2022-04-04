@@ -23,11 +23,10 @@ if (value.size() <= 1){
     val.append(value);
     return value;
 }
-else{
+
+    cout<<val;
     val.append(value.substr(value.size() - 1,1));
     return reverseString(value.substr(0, value.size() - 1));
-}
-    cout<<val;
 
     return 0;
 }
