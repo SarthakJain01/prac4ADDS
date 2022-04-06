@@ -20,12 +20,8 @@ return reverseDigit(value/10);
 string Reverse::reverseString(string value){
     string val = "";
 if (value.size() <= 1){
-    val.append(value);
-    cout<<val<<endl;
     return value;
 }
-    val.append(value.substr(value.size() - 1,1));
-    cout<<val;
-    return reverseString(value.substr(0, value.size() - 1));
+    return value.substr(value.size() - 1,1) + reverseString(value.substr(0, value.size() - 1));
 
 }
