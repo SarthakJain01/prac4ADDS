@@ -21,12 +21,11 @@ string Reverse::reverseString(string value){
     string val = "";
 if (value.size() <= 1){
     val.append(value);
+    cout<<val<<endl;
     return value;
 }
-
-    cout<<val;
     val.append(value.substr(value.size() - 1,1));
+    cout<<val;
     return reverseString(value.substr(0, value.size() - 1));
 
-    return 0;
 }
